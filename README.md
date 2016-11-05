@@ -52,7 +52,7 @@ Download `blobject-fit.min.js`, add it to your project folder, and include it so
 
 Or via Composer:
 ```bash
-composer require "Blobfolio/blobject-fit:dev-master"
+composer require "blobfolio/blobject-fit:dev-master"
 ```
 
 Or via Bower:
