@@ -1,0 +1,23 @@
+{
+  "name": "blobject-fit",
+  "main": "src/blobject-fit.js",
+  "version": "1.0",
+  "homepage": "https://github.com/Blobfolio/blobject-fit",
+  "authors": [
+    "Josh Stoik"
+  ],
+  "description": "A lightweight, dependency-free object-fit polyfill.",
+  "license": "WTFPL",
+  "ignore": [
+    "composer.json",
+    "component.json",
+    "README.md",
+    "LICENSE",
+    ".gitignore",
+    "blobject-fit.min.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Blobfolio/blobject-fit.git"
+  }
+}

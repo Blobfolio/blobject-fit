@@ -1,0 +1,28 @@
+{
+    "name": "blobfolio/blobject-fit",
+    "description": "A lightweight, dependency-free object-fit polyfill.",
+    "type": "component",
+    "homepage": "https://github.com/Blobfolio/blobject-fit",
+    "license": "WTFPL",
+    "authors": [
+        {
+            "name": "Josh Stoik",
+            "email": "josh@blobfolio.com",
+            "homepage": "https://blobfolio.com"
+        }
+    ],
+    "require": {
+    	"robloach/component-installer": "*"
+	},
+	"extra": {
+		"component": {
+			"scripts": [
+				"blobject-fit.min.js"
+			],
+			"styles": [],
+			"files": [
+				"blobject-fit.min.js"
+			]
+		}
+	}
+}
