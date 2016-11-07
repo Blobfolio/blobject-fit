@@ -70,7 +70,6 @@
 					'.blobject-fit.blobject-fit_object-fit_cover { background-size: cover; } ' +
 					'.blobject-fit.blobject-fit_object-fit_contain { background-size: contain; } ' +
 					'.blobject-fit--image { visibility: hidden; height: 0; width: 0; }',
-			head = document.head || document.getElementsByTagName('head')[0],
 			style = document.createElement('style');
 
 		style.type = 'text/css';
@@ -79,7 +78,7 @@
 		else
 			style.appendChild(document.createTextNode(css));
 
-		head.appendChild(style);
+		document.head.appendChild(style);
 
 		return true;
 	}
