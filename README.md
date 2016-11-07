@@ -33,7 +33,7 @@ medium.jpg, and large.jpg depending on the screen size.
 
 blobject-fit does not require any Javascript frameworks, however browsers must support the following:
 * [background-size](http://caniuse.com/#feat=background-img-opts) (IE9+)
-* [classList](http://caniuse.com/#feat=classlist) (IE11+)
+* [classList](http://caniuse.com/#feat=classlist) (IE10+)
 * [querySelector](http://caniuse.com/#feat=queryselector) + [querySelectorAll](http://caniuse.com/#feat=queryselector) (IE8+)
 
 Responsive image sources (e.g. `srcset`, `<picture>`) require native browser support for the markup you've chosen. Otherwise it will just use the good ol' `src` source.
