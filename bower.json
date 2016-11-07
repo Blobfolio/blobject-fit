@@ -14,7 +14,9 @@
     "README.md",
     "LICENSE",
     ".gitignore",
-    "blobject-fit.min.js"
+    "blobject-fit.min.js",
+    "Gruntfile.js",
+    "package.json"
   ],
   "repository": {
     "type": "git",

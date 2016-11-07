@@ -1,0 +1,10 @@
+{
+  "name": "blobject-fit",
+  "devDependencies": {
+    "grunt": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-notify": "*"
+  }
+}
