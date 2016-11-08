@@ -65,13 +65,13 @@ bower install blobject-fit
 Your existing `object-fit` CSS definitions may not be readable at runtime. Following the convention established by earlier `object-fit` polyfills, blobject-fit requires the inclusion of a clever `font-family` hack in your CSS:
 
 ```css
-//an example using "cover"
+/* an example using "cover" */
 .my-cover-image {
     object-fit: cover;
     font-family: 'object-fit: cover;';
 }
 
-//an example using "contain"
+/* an example using "contain" */
 .my-contain-image {
     object-fit: contain;
     font-family: 'object-fit: contain;';
