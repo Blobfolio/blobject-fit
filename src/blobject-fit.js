@@ -1,7 +1,7 @@
 /**
 *
 * blobject-fit
-* Version: 1.5
+* Version: 1.6
 *
 * Copyright © 2017 Blobfolio, LLC <https://blobfolio.com>
 * This work is free. You can redistribute it and/or modify
@@ -14,6 +14,10 @@
 
 	//-------------------------------------------------
 	// Images
+
+	var positionsY = ['top','center','bottom'],
+		positionsX = ['left','center','right'],
+		positions  = ['top','center','bottom','left','right'];
 
 	function blobjectFitImage(){
 		var images = document.querySelectorAll('img') || [];
@@ -37,7 +41,8 @@
 				if(imageFit.indexOf(';') === -1)
 					imageFit = imageFit + ';';
 
-				var imageProps = imageFit.split(';');
+				var imageProps = imageFit.split(';'),
+					parent = image.parentNode;
 
 				//each font-family prop
 				for(i2=0; i2<imageProps.length; i2++){
@@ -50,14 +55,58 @@
 						//make sure it is a sneaky object-fit line
 						if(tmp[0] === 'object-fit' && ['cover','contain'].indexOf(tmp[1]) !== -1){
 							var imageClass = 'blobject-fit_object-fit_' + tmp[1],
-								src = image.currentSrc || image.src,
-								parent = image.parentNode;
+								src = image.currentSrc || image.src;
 
 							parent.classList.add('blobject-fit');
 							parent.classList.add(imageClass);
 							parent.style.backgroundImage = 'url(' + src + ')';
 							image.setAttribute('data-blobject-fit-src', src);
 							image.classList.add('blobject-fit--image');
+						}
+						//object position?
+						else if(tmp[0] === 'object-position') {
+							// Can we make sense of it?
+							var position = false;
+
+							// If only one thing is passed, the missing bit is center.
+							if(positionsY.indexOf(tmp[1]) !== -1){
+								position = tmp[1] + '-center';
+							}
+							else if(positionsX.indexOf(tmp[1]) !== -1){
+								position = 'center-' + tmp[1];
+							}
+							else if((tmp[1] === 'topleft') || (tmp[1] === 'lefttop')){
+								position = 'top-left';
+							}
+							else if((tmp[1] === 'topcenter') || (tmp[1] === 'centertop')){
+								position = 'top-center';
+							}
+							else if((tmp[1] === 'topright') || (tmp[1] === 'righttop')){
+								position = 'top-right';
+							}
+							else if((tmp[1] === 'centerleft') || (tmp[1] === 'leftcenter')){
+								position = 'center-left';
+							}
+							else if(tmp[1] === 'centercenter'){
+								position = 'center-center';
+							}
+							else if((tmp[1] === 'centerright') || (tmp[1] === 'rightcenter')){
+								position = 'center-right';
+							}
+							else if((tmp[1] === 'bottomleft') || (tmp[1] === 'leftbottom')){
+								position = 'bottom-left';
+							}
+							else if((tmp[1] === 'bottomcenter') || (tmp[1] === 'centerbottom')){
+								position = 'bottom-center';
+							}
+							else if((tmp[1] === 'bottomright') || (tmp[1] === 'rightbottom')){
+								position = 'bottom-right';
+							}
+
+							// We have a keyword position.
+							if(position){
+								parent.classList.add('blobject-fit_object-position_' + position);
+							}
 						}
 					}//valid object fit property
 				}//each object fit property
@@ -219,6 +268,15 @@
 		var css =	'.blobject-fit { background: transparent none scroll center center no-repeat; } ' +
 					'.blobject-fit.blobject-fit_object-fit_cover { background-size: cover; } ' +
 					'.blobject-fit.blobject-fit_object-fit_contain { background-size: contain; } ' +
+					'.blobject-fit.blobject-fit_object-position_top-left { background-position: top left; }' +
+					'.blobject-fit.blobject-fit_object-position_top-center { background-position: top center; }' +
+					'.blobject-fit.blobject-fit_object-position_top-right { background-position: top right; }' +
+					'.blobject-fit.blobject-fit_object-position_center-left { background-position: center left; }' +
+					'.blobject-fit.blobject-fit_object-position_center-center { background-position: center center; }' +
+					'.blobject-fit.blobject-fit_object-position_center-right { background-position: center right; }' +
+					'.blobject-fit.blobject-fit_object-position_bottom-left { background-position: bottom left; }' +
+					'.blobject-fit.blobject-fit_object-position_bottom-center { background-position: bottom center; }' +
+					'.blobject-fit.blobject-fit_object-position_bottom-right { background-position: bottom right; }' +
 					'.blobject-fit--image { visibility: hidden; height: 0; width: 0; } ' +
 					'.blobject-fit--video--wrapper { overflow: hidden; } ' +
 					'.blobject-fit--video--wrapper_relative { position: relative; } ' +

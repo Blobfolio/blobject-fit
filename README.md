@@ -17,6 +17,8 @@ A lightweight, dependency-free `object-fit` polyfill.
 
 blobject-fit provides fallback support for images with `object-fit: cover` and `object-fit: contain` styles via `background-size: cover` and `background-size: contain` respectively.
 
+`object-position` is supported if the values are keywords like `"top"` or `"center"`, e.g. `object-position: top right`, via `background-position: Y X`. The default is `center center`.
+
 blobject-fit is responsive-capable so long as the visitor's browser supports the particular markup you have chosen. For example:
 
 ```html
@@ -28,6 +30,8 @@ medium.jpg, and large.jpg depending on the screen size.
 ```
 
 It provides fallback support for videos with `object-fit: cover` and `object-fit: contain` as well, though Javascript has to set the width and height explicitly for `cover`.
+
+`object-position` is not yet supported for video elements. They'll draw from `center center`.
 
 
 
@@ -84,6 +88,13 @@ Your existing `object-fit` CSS definitions may not be readable at runtime. Follo
 .my-contain-image {
     object-fit: contain;
     font-family: 'object-fit: contain;';
+}
+
+/* an example with positioning */
+.my-cover-image {
+    object-fit: cover;
+    object-position: bottom left;
+    font-family: 'object-fit: cover; object-position: bottom left;';
 }
 ```
 
