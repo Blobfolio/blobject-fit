@@ -12,6 +12,7 @@ A lightweight, dependency-free `object-fit` polyfill.
 4. [License](#license)
 
 
+&nbsp;
 
 ## Features
 
@@ -34,6 +35,7 @@ It provides fallback support for videos with `object-fit: cover` and `object-fit
 `object-position` is not yet supported for video elements. They'll draw from `center center`.
 
 
+&nbsp;
 
 ## Requirements
 
@@ -52,6 +54,7 @@ Responsive image sources (e.g. `srcset`, `<picture>`) require native browser sup
 Non-video `<video>` sources may not size correctly. If you're dealing with a pre-IE9 crowd or have other compatibility concerns, you should implement additional tests when constructing the DOM.
 
 
+&nbsp;
 
 ## Installation
 
@@ -105,6 +108,7 @@ That's it!
 blobject-fit will automatically detect `object-fit` support when the DOM loads and, if necessary, adjust any fitted images it finds.
 
 
+&nbsp;
 
 ## License
 
@@ -125,3 +129,14 @@ This work is free. You can redistribute it and/or modify it under the terms of t
     TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
     
     0. You just DO WHAT THE FUCK YOU WANT TO.
+
+### Donations
+
+<table>
+  <tbody>
+    <tr>
+      <td width="200"><img src="https://blobfolio.com/wp-content/themes/b3/svg/btc-github.svg" width="200" height="200" alt="Bitcoin QR" /></td>
+      <td width="450">If you have found this work useful and would like to contribute financially, Bitcoin tips are always welcome!<br /><br /><strong>1PQhurwP2mcM8rHynYMzzs4KSKpBbVz5is</strong></td>
+    </tr>
+  </tbody>
+</table>
