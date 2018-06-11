@@ -3,11 +3,11 @@
  *
  * @version 1.5.1
  * @author Blobfolio, LLC <hello@blobfolio.com>
- * @package vue-blob-forms
+ * @package blobject-fit
  * @license WTFPL <http://www.wtfpl.net>
  *
  * @see https://blobfolio.com
- * @see https://github.com/Blobfolio/vue-blob-forms
+ * @see https://github.com/Blobfolio/blobject-fit
 **/
 
 (function() {
