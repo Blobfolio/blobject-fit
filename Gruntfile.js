@@ -1,17 +1,23 @@
 /*global module:false*/
 module.exports = function(grunt) {
 
-	//Project configuration.
+	// Project configuration.
 	grunt.initConfig({
-		//Metadata.
+		// Metadata.
 		pkg: grunt.file.readJSON('package.json'),
 
-		//JS HINT
-		jshint: {
-			all: ['src/blobject-fit.js']
+		// Javascript.
+		eslint: {
+			check: {
+				src: ['src/blobject-fit.js'],
+			},
+			fix: {
+				options: {
+					fix: true,
+				},
+				src: ['src/blobject-fit.js'],
+			}
 		},
-
-		//JS COMPRESSION
 		uglify: {
 			options: {
 				mangle: false
@@ -22,8 +28,7 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-
-		//WATCH
+		// Watch.
 		watch: {
 			scripts: {
 				files: ['src/*.js'],
@@ -33,8 +38,7 @@ module.exports = function(grunt) {
 				},
 			}
 		},
-
-		//NOTIFY
+		// Notify.
 		notify: {
 			js: {
 				options: {
@@ -45,14 +49,14 @@ module.exports = function(grunt) {
 		}
 	});
 
-	//These plugins provide necessary tasks.
-	grunt.loadNpmTasks('grunt-contrib-uglify');
+	// These plugins provide necessary tasks.
+	grunt.loadNpmTasks('grunt-contrib-uglify-es');
 	grunt.loadNpmTasks('grunt-contrib-watch');
-	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-eslint');
 	grunt.loadNpmTasks('grunt-notify');
 
 	//tasks
-	grunt.registerTask('javascript', ['jshint', 'uglify']);
+	grunt.registerTask('javascript', ['eslint', 'uglify']);
 
 	grunt.event.on('watch', function(action, filepath, target) {
 		grunt.log.writeln(target + ': ' + filepath + ' has ' + action);

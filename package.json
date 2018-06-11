@@ -2,9 +2,9 @@
   "name": "blobject-fit",
   "devDependencies": {
     "grunt": "*",
-    "grunt-contrib-jshint": "*",
-    "grunt-contrib-uglify": "*",
+    "grunt-eslint": "*",
     "grunt-contrib-watch": "*",
-    "grunt-notify": "*"
+    "grunt-notify": "*",
+    "grunt-contrib-uglify-es": "git://github.com/gruntjs/grunt-contrib-uglify.git#harmony"
   }
 }

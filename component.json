@@ -2,7 +2,7 @@
     "name": "blobject-fit",
     "repo": "blobfolio/blobject-fit",
     "description": "A lightweight, dependency-free object-fit polyfill.",
-    "version": "1.5",
+    "version": "1.5.1",
     "scripts": [
         "blobject-fit.min.js"
     ],

@@ -1,7 +1,7 @@
 {
   "name": "blobject-fit",
   "main": "src/blobject-fit.js",
-  "version": "1.0",
+  "version": "1.5.1",
   "homepage": "https://github.com/Blobfolio/blobject-fit",
   "authors": [
     "Josh Stoik"
