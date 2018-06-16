@@ -17,7 +17,7 @@ command -v uglifyjs >/dev/null 2>&1 || {
 
 
 # Just one file.
-uglifyjs -c --ecma 5 -m -o "blobject-fit.min.js" -- "src/blobject-fit.js"
+uglifyjs -c --ecma 5 -o "blobject-fit.min.js" -- "src/blobject-fit.js"
 echo -e "\033[2mminifying:\033[0m blobject-fit.min.js"
 
 
