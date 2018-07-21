@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1,maximum-scale=1" name="viewport">
+
+	<link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
+
+	<style type="text/css">
+		.box {
+			position: relative;
+			display: inline-block;
+
+			width: 200px;
+			height: 200px;
+
+			margin: 20px 20px 40px;
+
+			border: 5px solid black;
+			background: red;
+		}
+
+		.box:after {
+			content: attr(data-label);
+			position: absolute;
+			top: 100%;
+			left: 0;
+			font-size: 14px;
+			font-family: monospace;
+			padding: 5px 0;
+			color: black;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+		}
+
+		.of-cover {
+			object-fit: cover;
+			font-family: 'object-fit: cover';
+		}
+
+		.of-contain {
+			object-fit: contain;
+			font-family: 'object-fit: contain';
+		}
+
+		.of-cover-top-left {
+			object-fit: cover;
+			object-position: top left;
+			font-family: 'object-fit: cover; object-position: top left;';
+		}
+
+		.of-cover-top-center {
+			object-fit: cover;
+			object-position: top center;
+			font-family: 'object-fit: cover; object-position: top center;';
+		}
+
+		.of-cover-top-right {
+			object-fit: cover;
+			object-position: top right;
+			font-family: 'object-fit: cover; object-position: top right;';
+		}
+
+		.of-cover-bottom-left {
+			object-fit: cover;
+			object-position: bottom left;
+			font-family: 'object-fit: cover; object-position: bottom left;';
+		}
+
+		.of-cover-bottom-center {
+			object-fit: cover;
+			object-position: bottom center;
+			font-family: 'object-fit: cover; object-position: bottom center;';
+		}
+
+		.of-cover-bottom-right {
+			object-fit: cover;
+			object-position: bottom right;
+			font-family: 'object-fit: cover; object-position: bottom right;';
+		}
+	</style>
+</head>
+<body>
+	<!-- First image. -->
+	<div class="box" data-label="cover">
+		<img src="img/demo1.jpg" class="of-cover" />
+	</div>
+
+	<div class="box" data-label="contain">
+		<img src="img/demo1.jpg" class="of-contain" />
+	</div>
+
+	<br>
+
+	<div class="box"  data-label="cover top/left">
+		<img src="img/demo1.jpg" class="of-cover-top-left" />
+	</div>
+
+	<div class="box"  data-label="cover top/center">
+		<img src="img/demo1.jpg" class="of-cover-top-center" />
+	</div>
+
+	<div class="box"  data-label="cover top/right">
+		<img src="img/demo1.jpg" class="of-cover-top-right" />
+	</div>
+
+	<br>
+
+	<div class="box"  data-label="cover bottom/left">
+		<img src="img/demo1.jpg" class="of-cover-bottom-left" />
+	</div>
+
+	<div class="box"  data-label="cover bottom/center">
+		<img src="img/demo1.jpg" class="of-cover-bottom-center" />
+	</div>
+
+	<div class="box"  data-label="cover bottom/right">
+		<img src="img/demo1.jpg" class="of-cover-bottom-right" />
+	</div>
+
+	<br>
+
+
+
+	<!-- Second Image. -->
+	<div class="box" data-label="cover">
+		<img src="img/demo2.jpg" class="of-cover" />
+	</div>
+
+	<div class="box" data-label="contain">
+		<img src="img/demo2.jpg" class="of-contain" />
+	</div>
+
+	<br>
+
+	<div class="box"  data-label="cover top/left">
+		<img src="img/demo2.jpg" class="of-cover-top-left" />
+	</div>
+
+	<div class="box"  data-label="cover top/center">
+		<img src="img/demo2.jpg" class="of-cover-top-center" />
+	</div>
+
+	<div class="box"  data-label="cover top/right">
+		<img src="img/demo2.jpg" class="of-cover-top-right" />
+	</div>
+
+	<br>
+
+	<div class="box"  data-label="cover bottom/left">
+		<img src="img/demo2.jpg" class="of-cover-bottom-left" />
+	</div>
+
+	<div class="box"  data-label="cover bottom/center">
+		<img src="img/demo2.jpg" class="of-cover-bottom-center" />
+	</div>
+
+	<div class="box"  data-label="cover bottom/right">
+		<img src="img/demo2.jpg" class="of-cover-bottom-right" />
+	</div>
+
+
+
+	<script src="blobject-fit.js"></script>
+</body>
+</html>
